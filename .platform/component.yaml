@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "spec-teste-k8s-cluster"
+  description: "Artifacts generator via Spec."
+  annotations:
+    github.com/project-slug: veecode-homolog/spec-teste-k8s-cluster
+    backstage.io/techdocs-ref: dir:..
+    github.com/workflows: publish.yml,remove.yml
+    kong-manager/service-name: app.spec-teste-k8s-cluster.80
+    kong-manager/instance: teste-k8s-cluster
+    kong-manager/spec : openapi-swagger.yaml
+spec:
+  type: devops
+  lifecycle: experimental
+  owner: "group:default/admin"
+  providesApis:
+    - spec-teste-k8s-cluster
